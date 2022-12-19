@@ -1,3 +1,4 @@
+#!/bin/python3
 string1 = ""
 string2 = ""
 string3 = ""

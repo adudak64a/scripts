@@ -15,6 +15,7 @@ chat_stat = {
 list_dirt_phrase = [
     "Тебе по голові часто били?! Нєхуй свої відео сюди слати!",
     "Оааайййй бляяя, пробнік ти оператора невдалий...",
+    "Ееееее.......фууу!"
     "Зайнятися нічим чи просто мозгів бог не дав?",
     "Слиш, ти, вакуумна насадка, досить це робити",
     "Ну чого як знімати відеоповідомлення ти знаєш, а те що вони нахуй нікому не нужні ти не знаєш",
@@ -30,6 +31,7 @@ list_dirt_phrase = [
     "Нуууу йоообааане обличчя цього повідомлення",
     "Піздуй звідси зі своїми відосaми куди подалі",
     "Хто навчив цю макаку знімати відео?",
+    "Отже ти, син руснявого зйобка і нещасного випадку вирішив що присилати сюди свої відеоматеріали то дуже гарна ідея. Що ж, розумію немає чим, але все ж, подумай ще раз!"
     "Що це? Я думав, що зоопарк закривається на ніч!",
     "Ах ти гуманоїд красножопий, знов за старе -_-",
     "Кадри з громадського туалету?",
@@ -44,7 +46,7 @@ def main():
     dispatcher.add_handler(CommandHandler("videohate_off", hate_off))
     dispatcher.add_handler(CommandHandler("videohate_on", hate_on))
     dispatcher.add_handler(CommandHandler("start", start_work))
-    botik.start_polling(timeout = 20)
+    botik.start_polling(timeout = 30)
 
 def start_work(update, context):
     context.bot.send_message(update.effective_message.chat_id, text=start_text)

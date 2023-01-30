@@ -46,10 +46,14 @@ def main():
     dispatcher.add_handler(CommandHandler("videohate_off", hate_off))
     dispatcher.add_handler(CommandHandler("videohate_on", hate_on))
     dispatcher.add_handler(CommandHandler("start", start_work))
+    dispatcher.add_handler(CommandHandler("ping", winter_2023_comming))
     botik.start_polling(timeout = 30)
 
 def start_work(update, context):
     context.bot.send_message(update.effective_message.chat_id, text=start_text)
+
+def winter_2023_comming(update, context):
+    context.bot.send_message(update.effective_message.chat_id, text="Ping")
 
 def rand_mess():
     return list_dirt_phrase[random.randint(0,len(list_dirt_phrase)-1)]
